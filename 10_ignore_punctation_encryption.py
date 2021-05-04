@@ -1,0 +1,2 @@
+else:
+    encryption = encryption + c

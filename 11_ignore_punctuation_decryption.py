@@ -1,0 +1,2 @@
+else:
+    decryption = decryption + c
