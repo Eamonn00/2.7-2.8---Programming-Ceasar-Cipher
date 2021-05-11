@@ -26,12 +26,12 @@ if answer == "encrypt":
                 new_char = chr(new_char_code)
                 encryption = encryption + new_char
 
-        elif c.isdigit():
-             new_c = (int(c) + index_key) % 10
-             encryption = encryption + str(new_c)
+        elif char.isdigit():
+             new_char = (int(char) + index_key) % 10
+             encryption = encryption + str(new_char)
 
         else:
-            encryption = encryption + c
+            encryption = encryption + char
 
     print(encryption)
 
@@ -46,29 +46,29 @@ elif answer == "decrypt":
 
     decryption = ""
 
-    for c in initial_text:
-        if c.isupper():
-            c_code = ord(c)
-            c_pos = ord(c) - ord("A")
-            new_pos = (c_pos - index_key) % 26
-            new_c_code = new_pos + ord("A")
-            new_c = chr(new_c_code)
-            decryption = decryption + new_c
+    for char in initial_text:
+        if char.isupper():
+            char_code = ord(char)
+            char_pos = ord(char) - ord("A")
+            new_pos = (char_pos - index_key) % 26
+            new_char_code = new_pos + ord("A")
+            new_char = chr(new_char_code)
+            decryption = decryption + new_char
 
-        elif c.islower():
-            c_code = ord(c)
-            c_pos = ord(c) - ord("a")
-            new_pos = (c_pos - index_key) % 26
-            new_c_code = new_pos + ord("a")
-            new_c = chr(new_c_code)
-            decryption = decryption + new_c
+        elif char.islower():
+            char_code = ord(char)
+            char_pos = ord(char) - ord("a")
+            new_pos = (char_pos - index_key) % 26
+            new_char_code = new_pos + ord("a")
+            new_char = chr(new_char_code)
+            decryption = decryption + new_char
 
-        elif c.isdigit():
-            new_c = (int(c) - index_key) % 10
-            decryption = decryption + str(new_c)
+        elif char.isdigit():
+            new_char = (int(char) - index_key) % 10
+            decryption = decryption + str(new_char)
 
         else:
-            decryption = decryption + c
+            decryption = decryption + char
 
     print(decryption)
 
