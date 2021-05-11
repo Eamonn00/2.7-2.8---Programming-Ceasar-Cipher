@@ -2,11 +2,13 @@ answer = input(print("Do you want to encrypt or decrypt a message?"))
 
 
 if answer == "encrypt":
-    initial_text = input(print("Enter the message you want to encrypt"))
+    initial_text = input(print("Enter the message you want to encrypt."))
 
-
-    index_key = int(input(print("what number do you want to use as your key?")))
-
+    try:
+        index_key = int(input(print("What number do you want to use as your key?")))
+    except:
+        print("Type a whole number to use as the key.")
+        
     encryption = ""
 
     for char in initial_text:
@@ -38,11 +40,12 @@ if answer == "encrypt":
 
 elif answer == "decrypt":
         
-    initial_text = input(print("Enter the message you want to decrypt"))
+    initial_text = input(print("Enter the message you want to decrypt."))
 
-
-    index_key = int(input(print("what number do you want to use as your key?")))
-
+    try:
+        index_key = int(input(print("What number do you want to use as your key?")))
+    except:
+        print("Type a whole number to use as the key.")
 
     decryption = ""
 
@@ -73,4 +76,4 @@ elif answer == "decrypt":
     print(decryption)
 
 else:
-    print("type encrypt to encrypt a message or decrypt to decrypt one.")
+    print("Type encrypt to encrypt a message or decrypt to decrypt one.")
